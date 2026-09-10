@@ -27,17 +27,16 @@ export default function Header() {
             <Image
               src={siteConfig.header.logo}
               alt={siteConfig.header.projectName}
-              width={40}
-              height={40}
+              width={164}
+              height={43}
               onError={() => setLogoError(true)}
-              className="h-10 w-auto"
+              className="h-9 w-auto md:h-10"
             />
           ) : (
-            <div className="h-10 w-10 rounded bg-gold/20" />
+            <span className="text-lg font-bold tracking-wide text-white md:text-xl">
+              {siteConfig.header.projectName}
+            </span>
           )}
-          <span className="text-lg font-bold tracking-wide text-white md:text-xl">
-            {siteConfig.header.projectName}
-          </span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
