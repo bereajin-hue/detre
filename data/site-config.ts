@@ -22,7 +22,7 @@ export const siteConfig = {
       { label: "사업개요", href: "#business" },
       { label: "입지안내", href: "#location" },
       { label: "상품안내", href: "#product" },
-      { label: "컨텍트", href: "#contact" },
+      { label: "문의", href: "#contact" },
     ],
   },
 
