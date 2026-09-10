@@ -5,6 +5,7 @@ import BusinessSection from "../../components/sections/BusinessSection";
 import LocationSection from "../../components/sections/LocationSection";
 import ProductSection from "../../components/sections/ProductSection";
 import ContactSection from "../../components/sections/ContactSection";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <LocationSection />
       <ProductSection />
       <ContactSection />
+      <Footer />
     </main>
   );
 }

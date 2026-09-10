@@ -14,7 +14,7 @@ export default function ContactSection() {
         href={siteConfig.contact.telLink}
         className="rounded-full bg-gold px-10 py-5 text-lg font-bold text-navy shadow-2xl transition-transform hover:scale-105 md:text-xl"
       >
-        📞 {siteConfig.contact.phone} 전화 문의하기
+        📞 {siteConfig.contact.phone} 상담예약
       </a>
     </section>
   );

@@ -68,7 +68,7 @@ export default function HeroBanner() {
           href="#contact"
           className="flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-bold text-navy shadow-xl transition-transform hover:scale-105 md:text-base"
         >
-          📞 {siteConfig.contact.phone} 문의하기
+          📞 {siteConfig.contact.phone} 상담예약
         </a>
       </div>
     </section>
