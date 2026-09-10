@@ -148,6 +148,21 @@ export const siteConfig = {
     ],
   },
 
+  // ─── 팝업 공지 ──────────────────────────────────────────
+  promoPopup: {
+    enabled: true,
+    badge: "즉시입주가능!",
+    titleLines: ["회사보유분 한정세대", "특별파격혜택"],
+    highlight: "동탄역 도보 5분",
+    items: [
+      { normal: "4년전 ", accent: "분양가 그대로~" },
+      { normal: "잔금 20% ", accent: "3년 유예(무이자)" },
+      { normal: "계약금 5% ", accent: "(1차 1천만원)" },
+      { normal: "담보대출 최대 ", accent: "70%" },
+      { normal: "프리미엄 빌트인 가전 ", accent: "무상제공" },
+    ],
+  },
+
   // ─── 컨텍트 ────────────────────────────────────────────
   contact: {
     phone: "1599-1877",
