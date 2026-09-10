@@ -15,14 +15,14 @@ export default function LocationSection() {
           입지안내
         </h2>
 
-        <div className="relative mb-12 h-[300px] w-full overflow-hidden rounded-xl md:h-[600px]">
+        <div className="relative mb-12 aspect-[2600/956] w-full overflow-hidden rounded-xl bg-black">
           {!imgError ? (
             <Image
               src={image}
               alt={alt}
               fill
               onError={() => setImgError(true)}
-              className="object-cover"
+              className="object-contain"
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center bg-gray-800 text-gray-500">
