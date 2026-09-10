@@ -106,6 +106,19 @@ export const siteConfig = {
       image: "/images/floor-plan.jpg",
       alt: "동탄역 디에트르 퍼스티지 단지평면도 주거용 오피스텔 104동 삼성SDI",
     },
+    locationPremium: {
+      newsImage: "/images/location_news.jpg",
+      newsAlt: "삼성전자 SK하이닉스 동탄역 셔틀버스 정차 셔세권 관련 언론보도",
+      newsAspect: "1218/405",
+      priceImage: "/images/price-compare.jpg",
+      priceAlt: "동탄역 인근 단지 대비 디에트르 퍼스티지 분양가 비교",
+      priceAspect: "1203/455",
+    },
+    saleBenefit: {
+      image: "/images/premium-finish.jpg",
+      alt: "동탄역 디에트르 퍼스티지 프리미엄 마감재 및 가전 무상시공 안내",
+      aspect: "1189/409",
+    },
     community: {
       image: "/images/community.jpg",
       alt: "동탄역 디에트르 퍼스티지 커뮤니티시설 피트니스 스크린골프 키즈룸 북카페",

@@ -35,6 +35,38 @@ function FullWidthImage({
   );
 }
 
+function AspectImage({
+  src,
+  alt,
+  aspect,
+}: {
+  src: string;
+  alt: string;
+  aspect: string;
+}) {
+  const [error, setError] = useState(false);
+  return (
+    <div
+      className="relative w-full overflow-hidden rounded-xl bg-gray-100"
+      style={{ aspectRatio: aspect.replace("/", " / ") }}
+    >
+      {!error ? (
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          onError={() => setError(true)}
+          className="object-contain"
+        />
+      ) : (
+        <div className="flex h-full w-full items-center justify-center bg-gray-100 text-gray-400">
+          이미지 준비 중
+        </div>
+      )}
+    </div>
+  );
+}
+
 function UnitCard({ unit }: { unit: (typeof siteConfig.product.units)[number] }) {
   const [error, setError] = useState(false);
   return (
@@ -82,7 +114,8 @@ function UnitCard({ unit }: { unit: (typeof siteConfig.product.units)[number] })
 }
 
 export default function ProductSection() {
-  const { sitePlan, floorPlan, community, units } = siteConfig.product;
+  const { sitePlan, floorPlan, community, units, locationPremium, saleBenefit } =
+    siteConfig.product;
 
   return (
     <section id="product">
@@ -100,6 +133,39 @@ export default function ProductSection() {
           maxH="h-[280px] md:h-[700px]"
           fit="cover"
         />
+      </div>
+
+      <div className="bg-white py-12 md:py-16">
+        <div className="mx-auto max-w-5xl px-4 md:px-8">
+          <h3 className="mb-8 text-center text-xl font-bold text-gray-900 md:text-2xl">
+            &apos;셔세권&apos; 프리미엄 — 오르는 입지에는 이유가 있습니다
+          </h3>
+          <div className="space-y-6">
+            <AspectImage
+              src={locationPremium.newsImage}
+              alt={locationPremium.newsAlt}
+              aspect={locationPremium.newsAspect}
+            />
+            <AspectImage
+              src={locationPremium.priceImage}
+              alt={locationPremium.priceAlt}
+              aspect={locationPremium.priceAspect}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-navy py-12 md:py-16">
+        <div className="mx-auto max-w-5xl px-4 md:px-8">
+          <h3 className="mb-8 text-center text-xl font-bold text-gold md:text-2xl">
+            분양특전 — 프리미엄 마감재·가전 무상시공
+          </h3>
+          <AspectImage
+            src={saleBenefit.image}
+            alt={saleBenefit.alt}
+            aspect={saleBenefit.aspect}
+          />
+        </div>
       </div>
 
       <div className="bg-dark pb-10">
